@@ -207,12 +207,13 @@
   .btn-primary{background:var(--ink);color:#fff;}
   .btn-secondary{background:transparent;color:var(--ink);border-color:var(--line);}
 
-  @media (max-height:760px) and (min-width:900px){
-    .hero{padding:8px 0 0;}
+  @media (max-height:820px) and (min-width:900px){
+    .hero{padding:8px 0 0;min-height:calc(100vh - 76px);box-sizing:border-box;}
     .hero h1{margin:6px 0 8px;}
     .hero-reframe{margin-bottom:4px;}
     .hero-illustration{margin:6px 0 8px;}
     .hero p.lead{margin-bottom:16px;}
+    #who-its-for{padding-top:24px;}
   }
 
   /* TICKER - signature element */
