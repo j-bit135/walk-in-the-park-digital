@@ -244,6 +244,8 @@
 
   section{padding:56px 0;}
   #who-its-for{padding-top:74px;scroll-margin-top:23px;}
+  /* same landing position for every menu jump: heading sits just clear of the sticky header */
+  section[id]:not(#who-its-for){scroll-margin-top:41px;}
   #who-its-for .section-head{margin-bottom:0;}
   .section-head{max-width:620px;margin:0 0 44px;}
   .section-head h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:14px;}
@@ -400,6 +402,12 @@
   }
   .contact-box h2{color:#fff;font-size:clamp(26px,3vw,34px);max-width:440px;}
   .contact-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .contact-side{display:flex;flex-direction:column;align-items:flex-end;gap:18px;}
+  .social{display:flex;gap:10px;}
+  .social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.25);display:inline-flex;align-items:center;justify-content:center;color:#fff;transition:background .15s,color .15s,transform .15s;}
+  .social a:hover{background:#fff;color:var(--ink);transform:translateY(-2px);}
+  .social svg{width:18px;height:18px;fill:currentColor;display:block;}
+  @media (max-width:720px){.contact-side{align-items:flex-start;}}
   .contact-box .btn-primary{background:#fff;color:var(--ink);}
   .contact-box .btn-secondary{border-color:rgba(255,255,255,0.25);color:#fff;}
   .email-note{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#a7a9bd;margin-top:10px;}
@@ -408,6 +416,21 @@
     padding:32px 0 48px;text-align:center;color:var(--ink-soft);font-size:13px;
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Walk in the Park Digital",
+  "url": "https://walkinthepark.digital/",
+  "logo": "https://walkinthepark.digital/android-chrome-512x512.png",
+  "email": "contact@walkinthepark.digital",
+  "telephone": "+447405052754",
+  "sameAs": [
+    "https://www.facebook.com/people/Walk-in-the-Park-Digital/61595894085721/",
+    "https://www.linkedin.com/company/walk-in-the-park-digital"
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -691,9 +714,15 @@
         <div class="email-note">tel: <a href="tel:+447405052754" style="color:inherit;text-decoration:underline;">+44 7405 052754</a></div>
         <div class="email-note">email: <a href="mailto:contact@walkinthepark.digital" style="color:inherit;text-decoration:underline;">contact@walkinthepark.digital</a></div>
       </div>
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:contact@walkinthepark.digital">Email us</a>
-        <button class="btn btn-secondary" id="copyBtn" style="cursor:pointer;font-family:inherit;">Copy email</button>
+      <div class="contact-side">
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:contact@walkinthepark.digital">Email us</a>
+          <button class="btn btn-secondary" id="copyBtn" style="cursor:pointer;font-family:inherit;">Copy email</button>
+        </div>
+        <div class="social">
+          <a href="https://www.facebook.com/people/Walk-in-the-Park-Digital/61595894085721/" target="_blank" rel="noopener noreferrer" aria-label="Walk in the Park Digital on Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.200-.1-2.300-.1-2.300 0-3.900 1.400-3.900 4v2.200H7.800v3h2.600V21z"/></svg></a>
+          <a href="https://www.linkedin.com/company/walk-in-the-park-digital" target="_blank" rel="noopener noreferrer" aria-label="Walk in the Park Digital on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6.5" cy="6.6" r="1.9"/><rect x="4.9" y="9.2" width="3.200" height="9.800"/><path d="M10.200 9.200h3v1.400c.5-.9 1.600-1.700 3.200-1.700 3 0 3.800 1.900 3.800 4.600V19h-3.200v-4.900c0-1.200-.3-2.100-1.600-2.100-1.300 0-1.800.9-1.800 2.200V19h-3.400z"/></svg></a>
+        </div>
       </div>
     </div>
   </div>
