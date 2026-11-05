@@ -1,6 +1,6 @@
 {
   "name": "Walk in the Park Digital",
-  "short_name": "Walk in the Park",
+  "short_name": "WITP Digital",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -11,9 +11,15 @@
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "/maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ],
-  "theme_color": "#f7f7f4",
-  "background_color": "#f7f7f4",
+  "theme_color": "#F7F7F4",
+  "background_color": "#F7F7F4",
   "display": "standalone"
 }
